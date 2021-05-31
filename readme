@@ -1,0 +1,35 @@
+1、convert_json2txt.py : 将labelme生成的json文件批量转换为txt格式
+
+2、 convert_labelme2coco.py ： 直接将labelme生成json文件批量转换为coco数据格式
+
+3、convert_to_BDN_sequence_free_ori.py ： BDN 提供的生成coco格式的源码
+
+4、convert_txt2BDN_sequence_free_modified.py ： 修改的BDN格式转换代码，生成杆件需要的coco格式
+
+5、convert_txt2BDN_sequence_free.py ： 同3
+
+6、convert_txt2coco.py ： 将txt格式的文件批量转换为coco格式， 与 1 配合使用
+
+7、delete_specified_character_in_file_name.py ： 批量删除文件名称中的指定字符
+
+8、gen_coco_vertice_points.py ： 将 4 生成的文件转换为verticenet要求的格式，到VerticeNet下面的tools中去用吧
+
+9、loss-new.py ： 读取maskrcnn的log文件并画出loss曲线
+
+10、loss.py ： 类似 9
+
+11、modify_bmp2jpg.py ： 将bmp格式的图片转为jpg格式
+
+12、modify_file_names copy.py ： 批量修改文件名称，按序号排列，0000000.***
+
+13、 modify_verices_order.py ： 批量修改杆件顶点的顺序，顺时针方向
+
+生成VerticeNet的json文件：
+1、将标注的json文件转换为txt（convert_json2txt.py）
+2、将所有的txt文件转为整合的json(convert_txt2coco.py)
+3、如果文件不是按照0，1，2....顺序排列，可以修改名字序列（modify_file_names.py）
+4、如果要更改标注的点的顺序，可以利用modify_file_points_order.py
+
+note：
+1、路径设置一定要正确
+2、在生成gt文件的时候，要到文件夹内选择所有文件压缩
